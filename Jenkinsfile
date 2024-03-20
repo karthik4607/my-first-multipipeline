@@ -16,7 +16,10 @@ pipeline {
            when{
              branch 'test'
            }
-        stage('Test') {
+            steps{
+                sh ''' cat README '''
+            }
+         stage('Test') {
             steps {
                 sh 'cd docker'
                 sh ' chmod +x ./docker/script.sh && ./docker/script.sh'
