@@ -13,7 +13,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './docker/script.sh'
+                sh 'cd docker'
+                sh ' sudo script.sh start'
             }
         }
     }
