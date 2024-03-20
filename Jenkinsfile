@@ -19,7 +19,8 @@ pipeline {
             steps{
                 sh ''' cat README '''
             }
-         stage('Test') {
+          } 
+          stage('Test') {
             steps {
                 sh 'cd docker'
                 sh ' chmod +x ./docker/script.sh && ./docker/script.sh'
