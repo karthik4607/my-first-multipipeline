@@ -8,16 +8,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'sudo apt install npm'
             }
         }
+
         stage('cat Readme') {
            when{
              branch 'test'
-            }
-   	   steps {
-             cat 'readme' 
-                   }
+           }
+        stage('Test') {
+            steps {
+                sh 'cd docker'
+                sh ' chmod +x ./docker/script.sh && ./docker/script.sh'
+              }
         }
     }
 }
