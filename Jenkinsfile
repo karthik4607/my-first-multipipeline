@@ -21,6 +21,7 @@ pipeline {
                 sh 'cd docker'
                 sh ' chmod +x ./docker/script.sh && ./docker/script.sh'
               }
-        }
-    }
+         }
+     }
+   }
 }
