@@ -13,10 +13,10 @@ pipeline {
         }
         stage('cat Readme') {
            when{
-             branch 'test'
+             branch "test"
             }
    	   steps {
-             sh''' cat readme '''
+             sh''' cat README '''
                    }
         }
     }
