@@ -11,10 +11,13 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
-            steps {
-                sh './jenkins/scripts/test.sh'
+        stage('cat Readme') {
+           when{
+             branch 'test'
             }
+   	   steps {
+             cat 'readme' 
+                   }
         }
     }
 }
