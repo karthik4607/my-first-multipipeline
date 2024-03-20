@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm -v'
+                sh './docker/script.sh'
             }
         }
     }
