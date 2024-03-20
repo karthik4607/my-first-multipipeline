@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'cd docker'
-                sh ' chmod +x script.sh && ./script.sh'
+                sh ' chmod +x ./script.sh && ./script.sh'
             }
         }
     }
