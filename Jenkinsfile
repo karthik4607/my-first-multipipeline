@@ -16,7 +16,7 @@ pipeline {
              branch 'test'
             }
    	   steps {
-             sh'cat 'readme' '
+             sh''' cat readme '''
                    }
         }
     }
